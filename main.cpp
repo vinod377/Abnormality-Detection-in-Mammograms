@@ -11,8 +11,8 @@
 
 int main(int argc, const char * argv[]) {
     
-    const path mypath("/Users/tangerine/PycharmProjects/dataset/ddsm/");
-    std::string  mammoCopyPath = "/Users/tangerine/PycharmProjects/dataset/ddsm_images_only/";
+    const path mypath("/path to downloaded ddsm folder.");
+    std::string  mammoCopyPath = "/path to write the converted .dcm file.";
     ddsmImageConversion ddsm_obj(mypath,mammoCopyPath);
     ddsm_obj.parse_file();
     ddsm_obj.ddsmToPng();
