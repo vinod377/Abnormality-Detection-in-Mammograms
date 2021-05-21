@@ -40,6 +40,8 @@ public:
 
 void ddsmImageConversion::parse_file()
 {
+    /* function for parsing the directory and getting the
+    .dcm file path and creating new image name for converted image*/
     recursive_directory_iterator end_itr;
     for(recursive_directory_iterator itr(mammoSourcePath);itr!=end_itr;++itr)
     {
@@ -69,7 +71,9 @@ void ddsmImageConversion::parse_file()
 }
 
 void ddsmImageConversion::ddsmToPng(){
-//    std::cout<<"iiii"<<path_list.size()<<std::endl;
+    /* Code to convert dcm file to .png file.
+     the .dcm file have 16 depth.Dcmtll lib is used for conversion*/
+
     for(int i = 0;i<path_list.size();i++)
     {
         const char * mammoImagePath = path_list[i].c_str();
